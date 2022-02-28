@@ -546,6 +546,7 @@ a {
 
 #siteMain{
     width: 100%;
+    overflow: hidden;
     
 }
 
@@ -1163,9 +1164,9 @@ input::placeholder{
         position: absolute;
         top: 50%;
         right: 20px;
-        width: 40px;
-        height: 40px;
-        margin-top: -20px;
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
         cursor: pointer;
         background-image: url(../img/burger.png);
         transition: all .5s ease-in-out;
