@@ -688,6 +688,10 @@ a {
 
 #aboutSec{
     padding-top: 70px;
+    background-image: url(../img/somosBg.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .cardHernan{
@@ -1098,9 +1102,10 @@ input::placeholder{
     text-align: center;
     background-color: #000000;
     color: #fff;
-    padding: 50px 0;
-    font-size: 23px;
+    padding: 15px 0;
+    font-size: 17px;
     width: 100%;
+    font-style: italic;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -1151,6 +1156,10 @@ input::placeholder{
 
 @media only screen and (max-width: 768px){
 
+    .slideTestimonials{
+        width: 85%;
+    }
+
     .titleSection{
         font-size: 30px;
     }
@@ -1170,6 +1179,7 @@ input::placeholder{
         cursor: pointer;
         background-image: url(../img/burger.png);
         transition: all .5s ease-in-out;
+        z-index: 10;
     }
 
     .burger.active{
@@ -1179,12 +1189,11 @@ input::placeholder{
    
 
     .rightContentHeader{
-        position: absolute;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
         width: 100%;
-        top: 80px;
-        height: auto;
-        max-height: 0;
-        left: 0;
         flex-direction: column;
         justify-content: start;
         align-items: center;
@@ -1194,27 +1203,73 @@ input::placeholder{
         background-color: #474747b6;
         padding: 0px 0;
         backdrop-filter: blur(9px);
+        background-image: url(../img/Logo.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .rightContentHeader:before{
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffffc5;
+        position: absolute;
     }
 
     .rightContentHeader.active{
-        max-height: 100vh;
-        padding: 30px 0;
+       left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #siteNav{
         width: 100%;
         flex-direction: column;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
+        position: relative;
+        
     }
 
     .itemNav{
         margin: 10px 0;
+        color: #000;
+        font-family: 'Roboto-Bold', serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        margin: 25px 0;
+    }
+
+    .itemNav.active{
+        border-color: transparent;
     }
 
     .socialNetworks{
         margin-left: 0;
         margin-top: 30px;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .rightContentHeader .itemNetwork{
+        width: 40px;
+        height: 40px;
+    }
+
+    .rightContentHeader .what {
+        background-image: url(../img/whatsappBlack.svg);
+    }
+
+    .rightContentHeader .ins {
+        background-image: url(../img/insBlack.svg);
+    }
+
+    .rightContentHeader .fa {
+        background-image: url(../img/faBlack.svg);
     }
 
     #heroSection{
