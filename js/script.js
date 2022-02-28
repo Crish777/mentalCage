@@ -1,4 +1,4 @@
-let burger, siteHeader, rightContentHeader, itemNav;
+let burger, siteHeader, rightContentHeader, itemNav, btnForm, nameInput, lastName, email, phone, message, inputs;
 
 document.addEventListener('DOMContentLoaded',function(){
     
@@ -239,11 +239,28 @@ function createVars(){
     burger = document.querySelector(".burger");
     rightContentHeader = document.querySelector(".rightContentHeader");
     itemNav = $(".itemNav");
+    btnForm = document.getElementById('btnForm');
+    nameInput = document.getElementById('name');
+    lastName = document.getElementById('lastName');
+    email = document.getElementById('email');
+    phone = document.getElementById('phone');
+    message = document.getElementById('message');
+    inputs = document.querySelectorAll('inputs')
 
    
 }
 
 function listeners(){
+
+    // btnForm.addEventListener("click", function(e){
+    //     e.preventDefault();
+    //     inputs.forEach(function(i){if(i.value === "" || i.value === undefined || i.value === null){
+    //         errorText.addClass("show");
+    //     }})
+    //     window.open('mailto:cristhianeleden@gmail.com?subject=Solicitud%3ADe%3AInformacion&body=lkajsdfklashdfjkh');
+    // })
+
+
     burger.addEventListener('click',function(){
         console.log(burger);
         if(rightContentHeader.classList.contains('active')){
@@ -261,9 +278,9 @@ function listeners(){
         $(this).addClass('active');
         
         rightContentHeader.classList.remove('active');
+        burger.classList.remove('active');
         e.preventDefault();
         let dataId = $(this).attr("href");
-        console.log(dataId);
         if(dataId){
             if(window.innerWidth <= 768){
                 setTimeout(() => {
