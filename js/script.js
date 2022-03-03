@@ -301,7 +301,7 @@ function listeners(){
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: ture,
+        autoplay: true,
         autoplaySpeed: 4000
       });
 }
