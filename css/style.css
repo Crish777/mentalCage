@@ -535,6 +535,15 @@ a {
     width: 25px;
     height: 25px;
     margin-left: 20px;
+    position: relative;
+}
+
+.itemNetwork a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .itemNetwork:first-of-type{
@@ -984,7 +993,7 @@ a {
 }
 
 .pictureTestimonial{
-    margin: 50px 0;
+    margin: 50px 0 10px;
     width: 150px;
     height: 150px;
     background-color: #fff;
@@ -994,6 +1003,39 @@ a {
 
 .picture1{
     background-image: url(../img/imgTestimonio1.jpg);
+}
+
+.picture2{
+    background-image: url(../img/sergio.jpg);
+}
+
+.testimonioName{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 0;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-image: url(../img/prev.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    left: -150px;
+    width: 40px;
+    height: 40px;
+}
+
+.slick-arrow.slick-next{
+    left: initial;
+    right: -150px;
+    background-image: url(../img/next.png);
 }
 
 
@@ -1032,6 +1074,7 @@ a {
     position: relative;
     background-color: #fff;
 }
+
 
 .contactBoxLast{
     justify-self: end;
