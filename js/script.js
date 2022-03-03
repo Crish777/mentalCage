@@ -296,5 +296,11 @@ function listeners(){
             
         }
     });
+
+    $('.slideTestimonials').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
 }
 
